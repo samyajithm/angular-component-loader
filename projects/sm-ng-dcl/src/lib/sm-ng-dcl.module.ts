@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { SmNgDclComponent } from './sm-ng-dcl.component';
-
+import {NgModule} from '@angular/core';
 
 
 @NgModule({
-  declarations: [SmNgDclComponent],
-  imports: [
-  ],
-  exports: [SmNgDclComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
-export class SmNgDclModule { }
+export class SmNgDclModule {
+}
