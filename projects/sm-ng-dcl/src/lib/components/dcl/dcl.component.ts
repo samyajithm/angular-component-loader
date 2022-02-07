@@ -1,5 +1,5 @@
 import {Component, ComponentFactoryResolver, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild} from '@angular/core';
-import {DynamicHost} from '../../model/componentLoader';
+import {DclHostConfig} from '../../model/dcl.model';
 import {ComponentHostDirective} from '../../directives/component-host.directive';
 import {ComponentLoaderService} from '../../service/component-loader.service';
 
@@ -11,7 +11,7 @@ import {ComponentLoaderService} from '../../service/component-loader.service';
 })
 export class DclComponent implements OnInit, OnChanges {
 
-  @Input() hostConfig: DynamicHost;
+  @Input() hostConfig: DclHostConfig;
   @Output() componentRefEmitter = new EventEmitter<any>();
   @Output() hostEventEmitter = new EventEmitter<any>();
   @ViewChild(ComponentHostDirective, {static: true}) host: ComponentHostDirective;
@@ -26,7 +26,7 @@ export class DclComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    // this.hostConfig.forEach((config: DynamicHost) => {
+    // this.hostConfig.forEach((config: DclHostConfig) => {
     if (this.hostConfig && this.hostConfig.componentName) {
       this.loadComponent(this.hostConfig.componentName, this.hostConfig.componentData);
     }
@@ -44,6 +44,5 @@ export class DclComponent implements OnInit, OnChanges {
       });
     }
     this.componentRefEmitter.emit(this._ref);
-    // (<AddComponent>componentRef.instance).data = componentToLoad.data;
   }
 }
