@@ -3,3 +3,4 @@
  */
 
 export * from './lib/sm-ng-dcl.module';
+export * from './lib/model/dcl.model';

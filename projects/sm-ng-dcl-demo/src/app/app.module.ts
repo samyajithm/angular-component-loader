@@ -1,18 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {SmNgDclModule} from 'sm-ng-dcl';
+import {CustomComponent} from './components/custom/custom.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
     SmNgDclModule
   ],
+  entryComponents: [
+    CustomComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
