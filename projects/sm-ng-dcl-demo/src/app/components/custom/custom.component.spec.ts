@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SmNgDclComponent } from './sm-ng-dcl.component';
+import { CustomComponent } from './custom.component';
 
-describe('SmNgDclComponent', () => {
-  let component: SmNgDclComponent;
-  let fixture: ComponentFixture<SmNgDclComponent>;
+describe('CustomComponent', () => {
+  let component: CustomComponent;
+  let fixture: ComponentFixture<CustomComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SmNgDclComponent ]
+      declarations: [ CustomComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SmNgDclComponent);
+    fixture = TestBed.createComponent(CustomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
