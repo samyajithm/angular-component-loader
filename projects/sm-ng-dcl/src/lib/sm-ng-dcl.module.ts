@@ -2,6 +2,12 @@ import {NgModule} from '@angular/core';
 import {DclComponent} from './components/dcl/dcl.component';
 import {ComponentHostDirective} from './directives/component-host.directive';
 
+export {
+  DclComponent,
+  ComponentHostDirective
+};
+
+export {registerComponent} from './decorator/registerComponent.decorator';
 
 @NgModule({
   declarations: [
@@ -14,5 +20,6 @@ import {ComponentHostDirective} from './directives/component-host.directive';
     ComponentHostDirective
   ]
 })
+
 export class SmNgDclModule {
 }
