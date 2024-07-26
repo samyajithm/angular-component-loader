@@ -6,19 +6,16 @@ import {SmNgDclModule} from 'sm-ng-dcl';
 import {CustomComponent} from './components/custom/custom.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CustomComponent
-  ],
-  imports: [
-    BrowserModule,
-    SmNgDclModule
-  ],
-  entryComponents: [
-    CustomComponent
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        CustomComponent
+    ],
+    imports: [
+        BrowserModule,
+        SmNgDclModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
